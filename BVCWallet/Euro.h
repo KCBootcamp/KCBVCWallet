@@ -10,9 +10,7 @@
 
 #import "Money.h"
 
-@interface Euro : NSObject
-
--(instancetype) initWithAmount:(NSInteger)amount;
+@interface Euro : Money
 
 -(Euro *) times: (NSInteger) multiplier;
 

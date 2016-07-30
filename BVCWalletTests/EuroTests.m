@@ -45,4 +45,20 @@
     
 }
 
+-(void) testHash{
+    Euro *a = [[Euro alloc] initWithAmount:2];
+    Euro *b = [[Euro alloc] initWithAmount:2];
+    
+    XCTAssertEqual([a hash], [b hash], @"Equal objects must have same hash");
+}
+
+
+-(void) testAmountStorage{
+    Euro *euro = [[Euro alloc] initWithAmount:2];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    XCTAssertEqual(2, [[euro performSelector:@selector(amount)] integerValue], @"The value retrieved should be the same as th stored");
+#pragma clagg diagnostic pop
+}
+
 @end

@@ -41,7 +41,23 @@
     Dollar *total = [five times: 2];
     
     XCTAssertEqualObjects(ten, total, @"Equivalent objects shoul be equal");
+    XCTAssertFalse([total isEqual:five], @"Non equivalent objects should not be equal");
     
+}
+
+-(void) testHash{
+    Dollar *a = [[Dollar alloc] initWithAmount:2];
+    Dollar *b = [[Dollar alloc] initWithAmount:2];
+    
+    XCTAssertEqual([a hash], [b hash], @"Equal objects must have same hash");
+}
+
+-(void) testAmountStorage{
+    Dollar *dollar = [[Dollar alloc] initWithAmount:2];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    XCTAssertEqual(2, [[dollar performSelector:@selector(amount)] integerValue], @"The value retrieved should be the same as th stored");
+#pragma clagg diagnostic pop
 }
 
 @end
