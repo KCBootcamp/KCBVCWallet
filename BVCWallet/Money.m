@@ -7,7 +7,7 @@
 //
 
 #import "Money.h"
-
+#import "NSObject+GNUStepAddons.h"
 
 @interface Money()
 
@@ -28,7 +28,7 @@
 -(Money *) times: (NSInteger) multiplier{
     // You should use the subclass method instead.
     
-    return self;
+    return [self subclassResponsibility:_cmd];
 }
 
 @end
