@@ -8,24 +8,35 @@
 
 #import "Money.h"
 #import "NSObject+GNUStepAddons.h"
-#import "Money-Private.h"
 
+@interface Money()
 
+@property(nonatomic) NSNumber *amount;
+
+@end
 
 @implementation Money
 
--(instancetype) initWithAmount:(NSInteger) amount{
++(id) euroWithAmount: (NSInteger) amount{
+    return [[Money alloc] initWithAmount: amount andCurrency:@"EUR"];
+}
+
++(id) dollarWithAmount: (NSInteger) amount{
+    return [[Money alloc] initWithAmount: amount andCurrency:@"USD"];
+    
+}
+
+-(instancetype) initWithAmount:(NSInteger) amount andCurrency: (NSString *) currency{
     if (self= [super init]){
         _amount = @(amount);
+        _currency = currency;
     }
     return self;
 }
 
 
--(Money *) times: (NSInteger) multiplier{
-    // You should use the subclass method instead.
-    
-    return [self subclassResponsibility:_cmd];
+-(id) times: (NSInteger) multiplier{
+    return [[Money alloc] initWithAmount: [self.amount integerValue] * multiplier andCurrency:self.currency];
 }
 
 #pragma mark - Overwritten
@@ -34,7 +45,11 @@
 }
 
 -(BOOL) isEqual:(id)object{
-    return [self amount] == [object amount];
+    if ([[self currency] isEqual:[object currency]]){
+        return [self amount] == [object amount];
+    } else{
+        return NO;
+    }
 }
 
 -(NSUInteger)hash{

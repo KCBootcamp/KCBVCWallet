@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F0803611D4BE63F009C4981 /* DollarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0803601D4BE63F009C4981 /* DollarTests.m */; };
-		7F0803641D4BE729009C4981 /* Dollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0803631D4BE729009C4981 /* Dollar.m */; };
 		7F0803671D4CB2F4009C4981 /* Money.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0803661D4CB2F4009C4981 /* Money.m */; };
-		7F08036E1D4CB85A009C4981 /* NSObject+GNUStepAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F08036D1D4CB85A009C4981 /* NSObject+GNUStepAddons.m */; };
 		7F0803701D4CBF12009C4981 /* MoneyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F08036F1D4CBF12009C4981 /* MoneyTests.m */; };
 		7FC0438E1D4B710E00B7790C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0438D1D4B710E00B7790C /* main.m */; };
 		7FC043911D4B710E00B7790C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC043901D4B710E00B7790C /* AppDelegate.m */; };
@@ -19,8 +16,6 @@
 		7FC043991D4B710E00B7790C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FC043981D4B710E00B7790C /* Assets.xcassets */; };
 		7FC0439C1D4B710E00B7790C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FC0439A1D4B710E00B7790C /* LaunchScreen.storyboard */; };
 		7FC043B21D4B710E00B7790C /* BVCWalletUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC043B11D4B710E00B7790C /* BVCWalletUITests.m */; };
-		7FC043C41D4B720C00B7790C /* EuroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC043C31D4B720C00B7790C /* EuroTests.m */; };
-		7FC043C81D4B730400B7790C /* Euro.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC043C71D4B730400B7790C /* Euro.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,15 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7F0803601D4BE63F009C4981 /* DollarTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DollarTests.m; sourceTree = "<group>"; };
-		7F0803621D4BE729009C4981 /* Dollar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dollar.h; sourceTree = "<group>"; };
-		7F0803631D4BE729009C4981 /* Dollar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dollar.m; sourceTree = "<group>"; };
 		7F0803651D4CB2F4009C4981 /* Money.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Money.h; sourceTree = "<group>"; };
 		7F0803661D4CB2F4009C4981 /* Money.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Money.m; sourceTree = "<group>"; };
-		7F08036C1D4CB85A009C4981 /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
-		7F08036D1D4CB85A009C4981 /* NSObject+GNUStepAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStepAddons.m"; sourceTree = "<group>"; };
 		7F08036F1D4CBF12009C4981 /* MoneyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyTests.m; sourceTree = "<group>"; };
-		7F0803711D4CCCCA009C4981 /* Money-Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Money-Private.h"; sourceTree = "<group>"; };
 		7FC043891D4B710E00B7790C /* BVCWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BVCWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FC0438D1D4B710E00B7790C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7FC0438F1D4B710E00B7790C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,9 +54,6 @@
 		7FC043AD1D4B710E00B7790C /* BVCWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BVCWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FC043B11D4B710E00B7790C /* BVCWalletUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BVCWalletUITests.m; sourceTree = "<group>"; };
 		7FC043B31D4B710E00B7790C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7FC043C31D4B720C00B7790C /* EuroTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EuroTests.m; sourceTree = "<group>"; };
-		7FC043C61D4B730400B7790C /* Euro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Euro.h; sourceTree = "<group>"; };
-		7FC043C71D4B730400B7790C /* Euro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Euro.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,15 +81,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7F0803681D4CB729009C4981 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				7F08036C1D4CB85A009C4981 /* NSObject+GNUStepAddons.h */,
-				7F08036D1D4CB85A009C4981 /* NSObject+GNUStepAddons.m */,
-			);
-			name = Categories;
-			sourceTree = "<group>";
-		};
 		7FC043801D4B710E00B7790C = {
 			isa = PBXGroup;
 			children = (
@@ -127,7 +104,6 @@
 		7FC0438B1D4B710E00B7790C /* BVCWallet */ = {
 			isa = PBXGroup;
 			children = (
-				7F0803681D4CB729009C4981 /* Categories */,
 				7FC043C51D4B72FA00B7790C /* Models */,
 				7FC0438F1D4B710E00B7790C /* AppDelegate.h */,
 				7FC043901D4B710E00B7790C /* AppDelegate.m */,
@@ -171,8 +147,6 @@
 		7FC043BF1D4B716000B7790C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7FC043C31D4B720C00B7790C /* EuroTests.m */,
-				7F0803601D4BE63F009C4981 /* DollarTests.m */,
 				7F08036F1D4CBF12009C4981 /* MoneyTests.m */,
 			);
 			name = Models;
@@ -181,13 +155,8 @@
 		7FC043C51D4B72FA00B7790C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7FC043C61D4B730400B7790C /* Euro.h */,
-				7FC043C71D4B730400B7790C /* Euro.m */,
-				7F0803621D4BE729009C4981 /* Dollar.h */,
-				7F0803631D4BE729009C4981 /* Dollar.m */,
 				7F0803651D4CB2F4009C4981 /* Money.h */,
 				7F0803661D4CB2F4009C4981 /* Money.m */,
-				7F0803711D4CCCCA009C4981 /* Money-Private.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -323,9 +292,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F0803671D4CB2F4009C4981 /* Money.m in Sources */,
-				7F0803641D4BE729009C4981 /* Dollar.m in Sources */,
-				7F08036E1D4CB85A009C4981 /* NSObject+GNUStepAddons.m in Sources */,
-				7FC043C81D4B730400B7790C /* Euro.m in Sources */,
 				7FC043941D4B710E00B7790C /* ViewController.m in Sources */,
 				7FC043911D4B710E00B7790C /* AppDelegate.m in Sources */,
 				7FC0438E1D4B710E00B7790C /* main.m in Sources */,
@@ -336,9 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FC043C41D4B720C00B7790C /* EuroTests.m in Sources */,
 				7F0803701D4CBF12009C4981 /* MoneyTests.m in Sources */,
-				7F0803611D4BE63F009C4981 /* DollarTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
