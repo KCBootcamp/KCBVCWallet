@@ -81,4 +81,23 @@
 }
 
 
+-(void) testSimpleAddition{
+    Money *sum = [[Money dollarWithAmount:5] plus: [Money dollarWithAmount:5]];
+    
+    XCTAssertEqualObjects(sum, [Money dollarWithAmount:10], @"$5 + $5 = $10");
+}
+
+-(void) testHashIsAmount{
+    Money * one = [Money dollarWithAmount:1];
+    
+    XCTAssertEqual([one hash], 1, @"The hash must be same as the amount");
+}
+
+-(void) testDescription{
+    Money *one = [Money dollarWithAmount:1];
+    NSString *desc = @"<Money: USD 1>";
+    
+    XCTAssertEqualObjects(desc, [one description], @"Description mus match template");
+}
+
 @end

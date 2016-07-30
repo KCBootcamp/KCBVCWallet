@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		7F0803671D4CB2F4009C4981 /* Money.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0803661D4CB2F4009C4981 /* Money.m */; };
 		7F0803701D4CBF12009C4981 /* MoneyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F08036F1D4CBF12009C4981 /* MoneyTests.m */; };
+		7F0803731D4D01C9009C4981 /* BrokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0803721D4D01C9009C4981 /* BrokerTests.m */; };
+		7F0803791D4D033D009C4981 /* Broker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0803781D4D033D009C4981 /* Broker.m */; };
+		7F08037A1D4D033D009C4981 /* Broker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0803781D4D033D009C4981 /* Broker.m */; };
 		7FC0438E1D4B710E00B7790C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0438D1D4B710E00B7790C /* main.m */; };
 		7FC043911D4B710E00B7790C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC043901D4B710E00B7790C /* AppDelegate.m */; };
 		7FC043941D4B710E00B7790C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC043931D4B710E00B7790C /* ViewController.m */; };
@@ -39,6 +42,9 @@
 		7F0803651D4CB2F4009C4981 /* Money.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Money.h; sourceTree = "<group>"; };
 		7F0803661D4CB2F4009C4981 /* Money.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Money.m; sourceTree = "<group>"; };
 		7F08036F1D4CBF12009C4981 /* MoneyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyTests.m; sourceTree = "<group>"; };
+		7F0803721D4D01C9009C4981 /* BrokerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrokerTests.m; sourceTree = "<group>"; };
+		7F0803771D4D033D009C4981 /* Broker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Broker.h; sourceTree = "<group>"; };
+		7F0803781D4D033D009C4981 /* Broker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Broker.m; sourceTree = "<group>"; };
 		7FC043891D4B710E00B7790C /* BVCWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BVCWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FC0438D1D4B710E00B7790C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7FC0438F1D4B710E00B7790C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -148,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				7F08036F1D4CBF12009C4981 /* MoneyTests.m */,
+				7F0803721D4D01C9009C4981 /* BrokerTests.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -157,6 +164,8 @@
 			children = (
 				7F0803651D4CB2F4009C4981 /* Money.h */,
 				7F0803661D4CB2F4009C4981 /* Money.m */,
+				7F0803771D4D033D009C4981 /* Broker.h */,
+				7F0803781D4D033D009C4981 /* Broker.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -295,6 +304,7 @@
 				7FC043941D4B710E00B7790C /* ViewController.m in Sources */,
 				7FC043911D4B710E00B7790C /* AppDelegate.m in Sources */,
 				7FC0438E1D4B710E00B7790C /* main.m in Sources */,
+				7F0803791D4D033D009C4981 /* Broker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +312,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F0803731D4D01C9009C4981 /* BrokerTests.m in Sources */,
+				7F08037A1D4D033D009C4981 /* Broker.m in Sources */,
 				7F0803701D4CBF12009C4981 /* MoneyTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

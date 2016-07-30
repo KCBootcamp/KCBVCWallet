@@ -9,11 +9,6 @@
 #import "Money.h"
 #import "NSObject+GNUStepAddons.h"
 
-@interface Money()
-
-@property(nonatomic) NSNumber *amount;
-
-@end
 
 @implementation Money
 
@@ -39,9 +34,17 @@
     return [[Money alloc] initWithAmount: [self.amount integerValue] * multiplier andCurrency:self.currency];
 }
 
+-(Money *) plus:(Money *) other{
+    
+    NSInteger totalAmount = [self.amount integerValue] + [other.amount integerValue];
+    
+    return [[Money alloc] initWithAmount:totalAmount andCurrency:self.currency];
+    
+}
+
 #pragma mark - Overwritten
 - (NSString *) description{
-    return [NSString stringWithFormat:@"<%@ %ld>", [self class], (long)[self amount]];
+    return [NSString stringWithFormat:@"<%@: %@ %@>", [self class], self.currency,self.amount];
 }
 
 -(BOOL) isEqual:(id)object{
@@ -53,7 +56,7 @@
 }
 
 -(NSUInteger)hash{
-    return (NSUInteger) self.amount;
+    return [self.amount integerValue];
 }
 
 @end
