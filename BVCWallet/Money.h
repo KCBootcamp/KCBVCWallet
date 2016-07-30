@@ -1,19 +1,17 @@
 //
-//  Euro.h
+//  Money.h
 //  BVCWallet
 //
-//  Created by Bhavish Chandnani on 29/7/16.
+//  Created by Bhavish Chandnani on 30/7/16.
 //  Copyright © 2016 BVC. All rights reserved.
 //
 
 @import Foundation;
 
-#import "Money.h"
-
-@interface Euro : NSObject
+@interface Money : NSObject
 
 -(instancetype) initWithAmount:(NSInteger)amount;
 
--(Euro *) times: (NSInteger) multiplier;
+-(Money *) times: (NSInteger) multiplier;
 
 @end

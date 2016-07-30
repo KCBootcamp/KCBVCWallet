@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F0803611D4BE63F009C4981 /* DollarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0803601D4BE63F009C4981 /* DollarTests.m */; };
 		7F0803641D4BE729009C4981 /* Dollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0803631D4BE729009C4981 /* Dollar.m */; };
+		7F0803671D4CB2F4009C4981 /* Money.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0803661D4CB2F4009C4981 /* Money.m */; };
 		7FC0438E1D4B710E00B7790C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0438D1D4B710E00B7790C /* main.m */; };
 		7FC043911D4B710E00B7790C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC043901D4B710E00B7790C /* AppDelegate.m */; };
 		7FC043941D4B710E00B7790C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC043931D4B710E00B7790C /* ViewController.m */; };
@@ -41,6 +42,8 @@
 		7F0803601D4BE63F009C4981 /* DollarTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DollarTests.m; sourceTree = "<group>"; };
 		7F0803621D4BE729009C4981 /* Dollar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dollar.h; sourceTree = "<group>"; };
 		7F0803631D4BE729009C4981 /* Dollar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dollar.m; sourceTree = "<group>"; };
+		7F0803651D4CB2F4009C4981 /* Money.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Money.h; sourceTree = "<group>"; };
+		7F0803661D4CB2F4009C4981 /* Money.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Money.m; sourceTree = "<group>"; };
 		7FC043891D4B710E00B7790C /* BVCWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BVCWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FC0438D1D4B710E00B7790C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7FC0438F1D4B710E00B7790C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -165,6 +168,8 @@
 				7FC043C71D4B730400B7790C /* Euro.m */,
 				7F0803621D4BE729009C4981 /* Dollar.h */,
 				7F0803631D4BE729009C4981 /* Dollar.m */,
+				7F0803651D4CB2F4009C4981 /* Money.h */,
+				7F0803661D4CB2F4009C4981 /* Money.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F0803671D4CB2F4009C4981 /* Money.m in Sources */,
 				7F0803641D4BE729009C4981 /* Dollar.m in Sources */,
 				7FC043C81D4B730400B7790C /* Euro.m in Sources */,
 				7FC043941D4B710E00B7790C /* ViewController.m in Sources */,
