@@ -7,8 +7,22 @@
 //
 
 @import Foundation;
+@class Money;
+@class Broker;
 
-@interface Money : NSObject
+@protocol Money <NSObject>
+
+-(id) initWithAmount:(NSInteger) amount andCurrency: (NSString *) currency;
+
+-(id<Money>) times: (NSInteger) multiplier;
+
+-(id<Money>) plus:(Money *) other;
+
+-(id<Money>) reduceToCurrency:(NSString *) currency withRate:(double) rate;
+
+@end
+
+@interface Money : NSObject<Money>
 
 @property(nonatomic, readonly) NSNumber *amount;
 @property(nonatomic, readonly) NSString *currency;
@@ -16,11 +30,5 @@
 +(id) euroWithAmount: (NSInteger) amount;
 
 +(id) dollarWithAmount: (NSInteger) amount;
-
--(instancetype) initWithAmount:(NSInteger) amount andCurrency: (NSString *) currency;
-
--(id) times: (NSInteger) multiplier;
-
--(Money *) plus:(Money *) other;
 
 @end

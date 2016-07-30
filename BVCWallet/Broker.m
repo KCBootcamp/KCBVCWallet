@@ -23,24 +23,10 @@
 }
 
 -(Money *)reduce:(Money *) money toCurrency: (NSString *) currency{
-    Money *result;
-    double rate = [[self.rates objectForKey:[self keyFromCurrency:money.currency toCurrency:currency]]doubleValue];
-    if ([money.currency isEqual:currency]){
-        result = money;
-    }else if (rate == 0){
-        // There is not convesion rate, exception
-        [NSException raise:@"NoConversionRateException" format:@"Must have a conversion from %@ to %@", money.currency, currency];
-    }else{
+    //double dispatch
+    double rate = [[self.rates objectForKey:[self keyFromCurrency: money.currency toCurrency:currency]]doubleValue];
+    return [money reduceToCurrency:currency withRate:rate];
     
-        NSInteger newAmount = [money.amount integerValue]* rate;
-    
-        Money *newMoney = [[Money alloc] initWithAmount:newAmount
-                                        andCurrency:currency];
-        
-        result = newMoney;
-    }
-    
-    return result;
 }
 
 -(void) addRate:(NSInteger) rate

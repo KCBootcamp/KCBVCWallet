@@ -21,7 +21,7 @@
     
 }
 
--(instancetype) initWithAmount:(NSInteger) amount andCurrency: (NSString *) currency{
+-(id) initWithAmount:(NSInteger) amount andCurrency: (NSString *) currency{
     if (self= [super init]){
         _amount = @(amount);
         _currency = currency;
@@ -30,16 +30,39 @@
 }
 
 
--(id) times: (NSInteger) multiplier{
+-(id<Money>) times: (NSInteger) multiplier{
     return [[Money alloc] initWithAmount: [self.amount integerValue] * multiplier andCurrency:self.currency];
 }
 
--(Money *) plus:(Money *) other{
+-(id<Money>) plus:(Money *) other{
     
     NSInteger totalAmount = [self.amount integerValue] + [other.amount integerValue];
     
     return [[Money alloc] initWithAmount:totalAmount andCurrency:self.currency];
     
+}
+
+
+-(id<Money>) reduceToCurrency:(NSString *) currency withRate:(double) rate{
+    Money *result;
+
+    if ([self.currency isEqual:currency]){
+        result = self;
+    }else if (rate == 0){
+        // There is not convesion rate, exception
+        [NSException raise:@"NoConversionRateException" format:@"Must have a conversion from %@ to %@", self.currency, currency];
+    }else{
+        
+        NSInteger newAmount = [self.amount integerValue]* rate;
+        
+        Money *newMoney = [[Money alloc] initWithAmount:newAmount
+                                            andCurrency:currency];
+        
+        result = newMoney;
+    }
+    
+    return result;
+
 }
 
 #pragma mark - Overwritten
