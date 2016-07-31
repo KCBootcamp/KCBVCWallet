@@ -7,7 +7,6 @@
 //
 
 #import "Wallet.h"
-#import "Money.h"
 #import "Broker.h"
 
 @interface Wallet()
@@ -57,5 +56,19 @@
         result = [result plus: [each reduceToCurrency:currency withBroker:broker] ];
     }
     return result;
+}
+
+#pragma mark - Notifications
+-(void) subscribeToMemoryWarning: (NSNotificationCenter *) nc{
+    
+    
+    [nc addObserver:self
+           selector: @selector(dumpToDisk:)
+               name:UIApplicationDidReceiveMemoryWarningNotification
+             object:nil];
+}
+
+-(void) dumpToDisk:(NSNotification *) notification{
+    //Save your stuff on disk.
 }
 @end

@@ -7,8 +7,12 @@
 //
 
 @import Foundation;
+@import UIKit;
 #import "Money.h"
 
 @interface Wallet : NSObject<Money>
 @property (nonatomic, readonly) NSUInteger count;
+
+-(void) subscribeToMemoryWarning: (NSNotificationCenter *) nc;
+
 @end
