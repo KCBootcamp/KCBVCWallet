@@ -51,12 +51,17 @@
 }
 
 -(void) testThatTableHasOneSection{
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wnonnull"
     NSUInteger sections = [self.walletVC numberOfSectionsInTableView:nil];
-    
+#pragma clang diagnostic pop
     XCTAssertEqual(sections, 1,@"There can be only one section!");
 }
 
 -(void) testThatNumberOfCellsIsNumberOfMoneyPlusOne{
-    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wnonnull"
+    XCTAssertEqual(self.wallet.count +1, [self.walletVC tableView:nil numberOfRowsInSection:0], @"Number of cells is the number of moneys plus 1");
+#pragma clang diagnostic pop
 }
 @end
