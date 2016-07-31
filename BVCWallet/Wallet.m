@@ -12,6 +12,7 @@
 @interface Wallet()
 
 @property(nonatomic, strong) NSMutableArray *moneys;
+@property(nonatomic, strong) NSMutableArray *currencies;
 
 @end
 
@@ -21,18 +22,25 @@
     return [self.moneys count];
 }
 
+-(NSUInteger) numberOfCurrencies{
+    return [self.currencies count];
+}
+
 -(id) initWithAmount:(NSInteger) amount andCurrency:(NSString *) currency{
     if (self = [super init]){
         Money *money = [[Money alloc] initWithAmount:amount andCurrency:currency];
         _moneys = [NSMutableArray array];
         [_moneys addObject:money];
+        [_currencies addObject: currency];
     }
     return self;
 }
 
 -(id<Money>) plus:(Money *) money{
     [self.moneys addObject: money];
-    
+    if (![self.currencies containsObject:money.currency]){
+        [self.currencies addObject: money.currency];
+    }
     return self;
 }
 
