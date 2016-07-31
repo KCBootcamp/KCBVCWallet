@@ -21,6 +21,8 @@
 		7F0803881D4E09F7009C4981 /* SimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F0803851D4E09F7009C4981 /* SimpleViewController.xib */; };
 		7F0803891D4E09F7009C4981 /* SimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F0803851D4E09F7009C4981 /* SimpleViewController.xib */; };
 		7F08038C1D4E0A3E009C4981 /* ControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F08038B1D4E0A3E009C4981 /* ControllerTests.m */; };
+		7F08038F1D4E1089009C4981 /* WalletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F08038E1D4E1089009C4981 /* WalletTableViewController.m */; };
+		7F0803901D4E1089009C4981 /* WalletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F08038E1D4E1089009C4981 /* WalletTableViewController.m */; };
 		7FC0438E1D4B710E00B7790C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0438D1D4B710E00B7790C /* main.m */; };
 		7FC043911D4B710E00B7790C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC043901D4B710E00B7790C /* AppDelegate.m */; };
 		7FC043941D4B710E00B7790C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC043931D4B710E00B7790C /* ViewController.m */; };
@@ -61,6 +63,8 @@
 		7F0803841D4E09F7009C4981 /* SimpleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleViewController.m; sourceTree = "<group>"; };
 		7F0803851D4E09F7009C4981 /* SimpleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleViewController.xib; sourceTree = "<group>"; };
 		7F08038B1D4E0A3E009C4981 /* ControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllerTests.m; sourceTree = "<group>"; };
+		7F08038D1D4E1089009C4981 /* WalletTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalletTableViewController.h; sourceTree = "<group>"; };
+		7F08038E1D4E1089009C4981 /* WalletTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalletTableViewController.m; sourceTree = "<group>"; };
 		7FC043891D4B710E00B7790C /* BVCWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BVCWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FC0438D1D4B710E00B7790C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7FC0438F1D4B710E00B7790C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 				7F0803831D4E09F7009C4981 /* SimpleViewController.h */,
 				7F0803841D4E09F7009C4981 /* SimpleViewController.m */,
 				7F0803851D4E09F7009C4981 /* SimpleViewController.xib */,
+				7F08038D1D4E1089009C4981 /* WalletTableViewController.h */,
+				7F08038E1D4E1089009C4981 /* WalletTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -347,6 +353,7 @@
 				7FC043911D4B710E00B7790C /* AppDelegate.m in Sources */,
 				7F0803861D4E09F7009C4981 /* SimpleViewController.m in Sources */,
 				7FC0438E1D4B710E00B7790C /* main.m in Sources */,
+				7F08038F1D4E1089009C4981 /* WalletTableViewController.m in Sources */,
 				7F0803791D4D033D009C4981 /* Broker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +367,7 @@
 				7F08037C1D4D1A11009C4981 /* WalletTests.m in Sources */,
 				7F08038C1D4E0A3E009C4981 /* ControllerTests.m in Sources */,
 				7F0803731D4D01C9009C4981 /* BrokerTests.m in Sources */,
+				7F0803901D4E1089009C4981 /* WalletTableViewController.m in Sources */,
 				7F0803871D4E09F7009C4981 /* SimpleViewController.m in Sources */,
 				7F08037A1D4D033D009C4981 /* Broker.m in Sources */,
 				7F0803701D4CBF12009C4981 /* MoneyTests.m in Sources */,
