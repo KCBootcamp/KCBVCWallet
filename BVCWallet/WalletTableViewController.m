@@ -54,15 +54,45 @@
     return rows;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    // Configure the cell...
+    if (!cell){
+        cell =[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
     
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    if (indexPath.section == [self.model numberOfCurrencies]){
+        cell.textLabel.text = [NSString stringWithFormat:@"Total Amount: %lu", (unsigned long)[self.model sumOfAllMoneys]];
+    }else{
+        NSString *currency = [self.model.currencies objectAtIndex:indexPath.section];
+        NSArray * moneys = [self.model moneysForCurrency:currency];
+        if (indexPath.section == [self.model numberOfCurrencies]){
+            cell.textLabel.text = [NSString stringWithFormat:@"Total Amount for %@: %lu", currency, (unsigned long)[self.model sumOfAllMoneysForCurrency:currency]];
+        
+        }else{
+    
+            cell.textLabel.text = [NSString stringWithFormat:@"Amount: %@", ((Money *)[moneys objectAtIndex:indexPath.row]).amount];
+        
+        }
+    }
     return cell;
 }
-*/
+
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    NSString *title;
+    if (section == ([self.model numberOfCurrencies])){
+        title=@"Total";
+    }else{
+        NSString *currency = [self.model.currencies objectAtIndex:section];
+        title=currency;
+    }
+    return title;
+
+}
 
 /*
 // Override to support conditional editing of the table view.

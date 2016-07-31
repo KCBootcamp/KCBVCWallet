@@ -76,6 +76,36 @@
     return count;
 }
 
+-(NSMutableArray *)moneysForCurrency:(NSString *) currency{
+    NSMutableArray *moneys=[NSMutableArray array];
+    for (Money *each in self.moneys) {
+        if ([each.currency isEqual:currency]){
+            [moneys addObject:each];
+        }
+    }
+    return moneys;
+}
+
+- (NSUInteger)sumOfAllMoneysForCurrency:(NSString *) currency{
+    Money *m = [[Money alloc] initWithAmount:0 andCurrency:@"EUR"];
+
+    for (Money *each in self.moneys) {
+        if ([each.currency isEqual:currency]){
+            m = [m plus:each];
+        }
+    }
+    return [m.amount integerValue];
+}
+
+- (NSUInteger)sumOfAllMoneys{
+    Money *m = [[Money alloc] initWithAmount:0 andCurrency:@"EUR"];
+    
+    for (Money *each in self.moneys) {
+        m = [m plus:each];
+    }
+    return [m.amount integerValue];
+}
+
 #pragma mark - Notifications
 -(void) subscribeToMemoryWarning: (NSNotificationCenter *) nc{
     

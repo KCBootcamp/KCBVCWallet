@@ -18,5 +18,8 @@
 -(void) subscribeToMemoryWarning: (NSNotificationCenter *) nc;
 
 -(NSUInteger)numberOfMoneysForCurrency:(NSString *) currency;
+-(NSMutableArray *)moneysForCurrency:(NSString *) currency;
+- (NSUInteger)sumOfAllMoneysForCurrency:(NSString *) currency;
+- (NSUInteger)sumOfAllMoneys;
 
 @end
