@@ -9,9 +9,6 @@
 #import "Broker.h"
 #import "Money.h"
 
-@interface Broker()
-@property (nonatomic, strong) NSMutableDictionary *rates;
-@end
 
 @implementation Broker
 
@@ -22,10 +19,10 @@
     return self;
 }
 
--(Money *)reduce:(Money *) money toCurrency: (NSString *) currency{
+-(Money *)reduce:(id<Money>) money toCurrency: (NSString *) currency{
     //double dispatch
-    double rate = [[self.rates objectForKey:[self keyFromCurrency: money.currency toCurrency:currency]]doubleValue];
-    return [money reduceToCurrency:currency withRate:rate];
+
+    return [money reduceToCurrency:currency withBroker:self];
     
 }
 

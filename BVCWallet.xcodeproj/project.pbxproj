@@ -15,6 +15,7 @@
 		7F08037C1D4D1A11009C4981 /* WalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F08037B1D4D1A11009C4981 /* WalletTests.m */; };
 		7F08037F1D4D1C3F009C4981 /* Wallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F08037E1D4D1C3F009C4981 /* Wallet.m */; };
 		7F0803801D4D1C3F009C4981 /* Wallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F08037E1D4D1C3F009C4981 /* Wallet.m */; };
+		7F0803811D4DFD5F009C4981 /* Money.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0803661D4CB2F4009C4981 /* Money.m */; };
 		7FC0438E1D4B710E00B7790C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0438D1D4B710E00B7790C /* main.m */; };
 		7FC043911D4B710E00B7790C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC043901D4B710E00B7790C /* AppDelegate.m */; };
 		7FC043941D4B710E00B7790C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC043931D4B710E00B7790C /* ViewController.m */; };
@@ -322,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F0803811D4DFD5F009C4981 /* Money.m in Sources */,
 				7F0803801D4D1C3F009C4981 /* Wallet.m in Sources */,
 				7F08037C1D4D1A11009C4981 /* WalletTests.m in Sources */,
 				7F0803731D4D01C9009C4981 /* BrokerTests.m in Sources */,

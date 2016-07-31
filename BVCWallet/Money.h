@@ -18,7 +18,7 @@
 
 -(id<Money>) plus:(Money *) other;
 
--(id<Money>) reduceToCurrency:(NSString *) currency withRate:(double) rate;
+-(id<Money>) reduceToCurrency:(NSString *) currency withBroker:(Broker *) broker;
 
 @end
 

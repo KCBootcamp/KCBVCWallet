@@ -6,7 +6,7 @@
 //  Copyright © 2016 BVC. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import "Money.h"
 
 @interface Wallet : NSObject<Money>

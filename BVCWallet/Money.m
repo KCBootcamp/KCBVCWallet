@@ -7,8 +7,7 @@
 //
 
 #import "Money.h"
-#import "NSObject+GNUStepAddons.h"
-
+#import "Broker.h"
 
 @implementation Money
 
@@ -43,9 +42,11 @@
 }
 
 
--(id<Money>) reduceToCurrency:(NSString *) currency withRate:(double) rate{
+-(id<Money>) reduceToCurrency:(NSString *) currency withBroker:(Broker *) broker{
+    double rate = [[broker.rates objectForKey:[broker keyFromCurrency: self.currency toCurrency:currency]]doubleValue];
+    
     Money *result;
-
+    
     if ([self.currency isEqual:currency]){
         result = self;
     }else if (rate == 0){
