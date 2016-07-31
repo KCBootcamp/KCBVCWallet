@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "WalletTableViewController.h"
+#import "Wallet.h"
 
 @interface AppDelegate ()
 
@@ -16,8 +18,25 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+
+    Wallet *wallet = [[Wallet alloc] initWithAmount:1 andCurrency:@"USD"];
+    [wallet plus:[Money euroWithAmount:2]];
+    WalletTableViewController *walletVC =[[WalletTableViewController alloc] initWithModel: wallet];
+
+    UINavigationController *walletNavVC = [[UINavigationController alloc] initWithRootViewController: walletVC];
+    
+   
+    self.window.rootViewController=walletNavVC;
+    
+    //self.window.backgroundColor = [UIColor whiteColor];
+
+    [self.window makeKeyAndVisible];
     return YES;
+
+
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

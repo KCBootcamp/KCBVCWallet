@@ -65,11 +65,11 @@
     
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     if (indexPath.section == [self.model numberOfCurrencies]){
-        cell.textLabel.text = [NSString stringWithFormat:@"Total Amount: %lu", (unsigned long)[self.model sumOfAllMoneys]];
+        cell.textLabel.text = [NSString stringWithFormat:@"Total Amount in EUR: %lu", (unsigned long)[self.model sumOfAllMoneys]];
     }else{
         NSString *currency = [self.model.currencies objectAtIndex:indexPath.section];
         NSArray * moneys = [self.model moneysForCurrency:currency];
-        if (indexPath.section == [self.model numberOfCurrencies]){
+        if (indexPath.row == [self.model numberOfMoneysForCurrency:currency]){
             cell.textLabel.text = [NSString stringWithFormat:@"Total Amount for %@: %lu", currency, (unsigned long)[self.model sumOfAllMoneysForCurrency:currency]];
         
         }else{

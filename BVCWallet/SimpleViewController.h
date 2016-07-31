@@ -6,9 +6,10 @@
 //  Copyright © 2016 BVC. All rights reserved.
 //
 
-#import "ViewController.h"
+@import Foundation;
+@import UIKit;
 
-@interface SimpleViewController : ViewController
+@interface SimpleViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *displayLabel;
 - (IBAction)displayText:(id)sender;
 
