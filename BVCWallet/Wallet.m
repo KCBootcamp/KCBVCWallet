@@ -12,7 +12,6 @@
 @interface Wallet()
 
 @property(nonatomic, strong) NSMutableArray *moneys;
-@property(nonatomic, strong) NSMutableArray *currencies;
 
 @end
 
@@ -30,6 +29,7 @@
     if (self = [super init]){
         Money *money = [[Money alloc] initWithAmount:amount andCurrency:currency];
         _moneys = [NSMutableArray array];
+        _currencies = [NSMutableArray array];
         [_moneys addObject:money];
         [_currencies addObject: currency];
     }
@@ -64,6 +64,16 @@
         result = [result plus: [each reduceToCurrency:currency withBroker:broker] ];
     }
     return result;
+}
+
+-(NSUInteger)numberOfMoneysForCurrency:(NSString *) currency{
+    NSUInteger count=0;
+    for (Money *each in self.moneys) {
+        if ([each.currency isEqual:currency]){
+            count++;
+        }
+    }
+    return count;
 }
 
 #pragma mark - Notifications

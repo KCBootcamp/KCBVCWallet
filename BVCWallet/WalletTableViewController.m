@@ -45,7 +45,13 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.model count] +1;
+    NSInteger rows=0;
+    if (section == ([self.model numberOfCurrencies])){
+        rows=1;
+    }else{
+        rows = [self.model numberOfMoneysForCurrency:[self.model.currencies objectAtIndex:section]] +1;
+    }
+    return rows;
 }
 
 /*
