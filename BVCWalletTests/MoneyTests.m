@@ -76,7 +76,7 @@
 #pragma clang diagnostic ignored "-Wundeclared-selector"
     XCTAssertEqual(2, [[euro performSelector:@selector(amount)] integerValue], @"The value retrieved should be the same as th stored");
     
-    XCTAssertEqual(2, [[[Money dollarWithAmount:2] performSelector:@selector(amount)] integerValue], @"The value retrieved should be the same as th stored");
+    XCTAssertEqual(2, [[[Money dollarWithAmount:2] performSelector:@selector(amount)] integerValue], @"The value retrieved should be the same as the stored");
 #pragma clagg diagnostic pop
 }
 
@@ -97,7 +97,7 @@
     Money *one = [Money dollarWithAmount:1];
     NSString *desc = @"<Money: USD 1>";
     
-    XCTAssertEqualObjects(desc, [one description], @"Description mus match template");
+    XCTAssertEqualObjects(desc, [one description], @"Description must match template");
 }
 
 @end
