@@ -25,7 +25,7 @@
     [super tearDown];
 }
 
--(void) testThatEmptyRatesRAisesException{
+-(void) testThatEmptyRatesRaisesException{
     Broker *broker = [Broker new];
     NSData *jsonData = nil;
     

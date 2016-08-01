@@ -21,10 +21,6 @@
     return [self.moneys count];
 }
 
--(NSUInteger) numberOfCurrencies{
-    return [self.currencies count];
-}
-
 -(id) initWithAmount:(NSInteger) amount andCurrency:(NSString *) currency{
     if (self = [super init]){
         Money *money = [[Money alloc] initWithAmount:amount andCurrency:currency];

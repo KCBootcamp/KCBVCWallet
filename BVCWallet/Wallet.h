@@ -12,7 +12,6 @@
 
 @interface Wallet : NSObject<Money>
 @property (nonatomic, readonly) NSUInteger count;
-@property (nonatomic, readonly) NSUInteger numberOfCurrencies;
 @property(nonatomic, strong) NSMutableArray *currencies;
 
 -(void) subscribeToMemoryWarning: (NSNotificationCenter *) nc;

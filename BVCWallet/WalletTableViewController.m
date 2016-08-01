@@ -41,12 +41,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return [self.model numberOfCurrencies] +1;
+    return [self.model.currencies count] +1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSInteger rows=0;
-    if (section == ([self.model numberOfCurrencies])){
+    if (section == ([self.model.currencies count])){
         rows=1;
     }else{
         rows = [self.model numberOfMoneysForCurrency:[self.model.currencies objectAtIndex:section]] +1;
@@ -64,7 +64,7 @@
     }
     
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-    if (indexPath.section == [self.model numberOfCurrencies]){
+    if (indexPath.section == [self.model.currencies count]){
         cell.textLabel.text = [NSString stringWithFormat:@"Total Amount in EUR: %lu", (unsigned long)[self.model sumOfAllMoneys]];
     }else{
         NSString *currency = [self.model.currencies objectAtIndex:indexPath.section];
@@ -84,7 +84,7 @@
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     NSString *title;
-    if (section == ([self.model numberOfCurrencies])){
+    if (section == ([self.model.currencies count])){
         title=@"Total";
     }else{
         NSString *currency = [self.model.currencies objectAtIndex:section];

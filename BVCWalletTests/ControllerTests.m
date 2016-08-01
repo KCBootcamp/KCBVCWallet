@@ -42,7 +42,7 @@
     self.label=nil;
 }
 
--(void) testThatTeextOnLabelIsEqualToTextOnButton{
+-(void) testThatTextOnLabelIsEqualToTextOnButton{
     // Send the message
     [self.simpleVC displayText: self.btn];
     
@@ -50,13 +50,13 @@
     XCTAssertEqualObjects(self.btn.titleLabel.text, self.label.text, @"Button and label should have the same text");
 }
 
--(void) testThatTableHasOneSection{
+-(void) testThatTableHasNumberOfCurrenciesSectionsPlusOne{
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wnonnull"
     NSUInteger sections = [self.walletVC numberOfSectionsInTableView:nil];
 #pragma clang diagnostic pop
     
-    NSUInteger numberOfCurrencies =  [self.wallet numberOfCurrencies];
+    NSUInteger numberOfCurrencies =  [self.wallet.currencies count];
     XCTAssertEqual(sections, numberOfCurrencies + 1,@"There should be as sections as currencies in the wallet plus 1!");
 }
 
@@ -68,7 +68,7 @@
          [self.walletVC.tableView numberOfSections]; i++){
         numOfCells += [self.walletVC tableView:nil numberOfRowsInSection:i];
     }
-    XCTAssertEqual([self.wallet count] + [self.wallet numberOfCurrencies] +1, numOfCells, @"Number of cells is the number of moneys plus number of sections plus 1");
+    XCTAssertEqual([self.wallet count] + [self.wallet.currencies count] +1, numOfCells, @"Number of cells is the number of moneys plus number of sections plus 1");
 #pragma clang diagnostic pop
 }
 
